@@ -1,0 +1,315 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "e9e76956-3686-4586-9cf2-5245698b2371",
+  "Name": "MappingFields",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "DirRX.MappingFields.Client",
+  "ClientBaseAssemblyName": "DirRX.MappingFields.ClientBase",
+  "ClientBaseNamespace": "DirRX.MappingFields.ClientBase",
+  "ClientNamespace": "DirRX.MappingFields.Client",
+  "Code": "Mappin1",
+  "CompanyCode": "DirRX",
+  "Cover": {
+    "NameGuid": "5495a05e-96d1-495d-8fdd-a7f4eb6a17ed",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "2eef407f-a6a1-4b49-a923-0c5b5c46a1fa",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "1c942d31-3de6-4ae5-b9d6-9a4eaca840fd",
+      "BackgroundPosition": "Stretch"
+    },
+    "RemoteControls": [],
+    "Tabs": []
+  },
+  "Dependencies": [
+    {
+      "Id": "28a2abed-2314-4feb-9e03-fd5d1e4f673a",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "8f4ae130-8b92-4590-9a6d-01b8179ee7ca"
+    },
+    {
+      "ItemId": "857f3d03-62bf-4ef9-9ed7-fc714676f7c1",
+      "PreviousItemId": "8f4ae130-8b92-4590-9a6d-01b8179ee7ca"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "DirRX.MappingFields",
+  "IsolatedAssemblyName": "DirRX.MappingFields.Isolated",
+  "IsolatedNamespace": "DirRX.MappingFields.Isolated",
+  "IsVisible": false,
+  "Overridden": [
+    "IsVisible"
+  ],
+  "PublicConstants": [
+    {
+      "Name": "DatabookGUID",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"04581d26-0780-4cfd-b3cd-c2cafc5798b0\""
+    },
+    {
+      "Name": "DocumentGUID",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"030d8d67-9b94-4f0d-bcc6-691016eb70f3\""
+    },
+    {
+      "Name": "EntityGUID",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"79aaa247-5f24-47a3-bf05-f0cd7ad30161\""
+    },
+    {
+      "Name": "TaskGUID",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"d795d1f6-45c1-4e5e-9677-b53fb7280c7e\""
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "CastTypeEntityToLocalizeName",
+      "Parameters": [
+        {
+          "Name": "type",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "guid",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "isJson",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "CreateEntitiesType",
+      "Parameters": [
+        {
+          "Name": "entityMetadata",
+          "ParameterType": "global::System.Collections.Generic.List<Sungero.Metadata.EntityMetadata>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "GetEntitiesMetadata",
+      "ReturnType": "global::System.Collections.Generic.List<Sungero.Metadata.EntityMetadata>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "GetPropertiesType",
+      "Parameters": [
+        {
+          "Name": "guid",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "collectionName",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.Collections.Generic.List<global::DirRX.MappingFields.Structures.Module.IPropertyInfo>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "ShowSelectTypeEntityDialog",
+      "Placement": "Client",
+      "ReturnType": "System.Collections.Generic.IEnumerable<global::DirRX.MappingFields.IEntityType>"
+    }
+  ],
+  "PublicStructures": [
+    {
+      "Name": "CollectionInfo",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "LocalizedName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Properties",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.MappingFields.Structures.Module.IPropertyInfo>"
+        }
+      ],
+      "StructureNamespace": "DirRX.MappingFields.Structures.Module"
+    },
+    {
+      "Name": "EnumerationInfo",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "LocalizedName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.MappingFields.Structures.Module"
+    },
+    {
+      "Name": "PropertyInfo",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "LocalizedName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Type",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "PropertyGuid",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "IsRequired",
+          "TypeFullName": "global::System.Boolean"
+        },
+        {
+          "Name": "EnumCollection",
+          "IsList": true,
+          "IsNullable": true,
+          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.MappingFields.Structures.Module.IEnumerationInfo>"
+        },
+        {
+          "Name": "MaxStringLength",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int32>"
+        }
+      ],
+      "StructureNamespace": "DirRX.MappingFields.Structures.Module"
+    },
+    {
+      "Name": "TableData",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ReportSessionId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ItemId",
+          "TypeFullName": "global::System.Int32"
+        },
+        {
+          "Name": "NameEntity",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "NameProperty",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "LocalizedName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "TypeJson",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Type",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "PropertyGuid",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "EnumCollection",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "MaxStringLength",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.MappingFields.Structures.Module"
+    }
+  ],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.MappingFields",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "DirRX.MappingFields.Server",
+  "ServerNamespace": "DirRX.MappingFields.Server",
+  "SharedAssemblyName": "DirRX.MappingFields.Shared",
+  "SharedNamespace": "DirRX.MappingFields.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 9
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

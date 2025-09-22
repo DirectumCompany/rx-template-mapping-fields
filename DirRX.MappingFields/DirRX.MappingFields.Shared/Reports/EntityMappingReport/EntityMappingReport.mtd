@@ -1,0 +1,51 @@
+{
+  "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
+  "NameGuid": "857f3d03-62bf-4ef9-9ed7-fc714676f7c1",
+  "Name": "EntityMappingReport",
+  "AssociatedGuid": "e9e76956-3686-4586-9cf2-5245698b2371",
+  "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
+  "DataSources": [],
+  "DefaultExportFormat": "Word",
+  "ExportFormats": [
+    "Word"
+  ],
+  "HandledEvents": [
+    "BeforeExecuteClient",
+    "BeforeExecuteServer",
+    "AfterExecuteServer"
+  ],
+  "IconResourcesKeys": [],
+  "IntegrationServiceName": "MappingFieldsEntityMappingReport",
+  "Overridden": [
+    "PublicStructures",
+    "HandledEvents",
+    "ExportFormats",
+    "DefaultExportFormat",
+    "Parameters",
+    "DisplayName"
+  ],
+  "Parameters": [
+    {
+      "NameGuid": "9e1f3813-3b17-45dc-bf74-5c560e449093",
+      "Name": "EntitiesType",
+      "EntityType": "8f4ae130-8b92-4590-9a6d-01b8179ee7ca",
+      "InternalDataTypeName": "DirRX.MappingFields.IEntityType, Sungero.Domain.Interfaces",
+      "IsCollection": true
+    },
+    {
+      "NameGuid": "9c1496d4-8a78-432b-ae37-d39dd2d6d970",
+      "Name": "ReportSessionId",
+      "InternalDataTypeName": "System.String"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [
+    "SelectTypicalEntities"
+  ],
+  "Versions": [
+    {
+      "Type": "ReportMetadata",
+      "Number": 1
+    }
+  ]
+}

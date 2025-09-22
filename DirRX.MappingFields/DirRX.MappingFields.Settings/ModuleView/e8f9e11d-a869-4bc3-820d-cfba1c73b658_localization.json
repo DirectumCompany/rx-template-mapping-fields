@@ -1,0 +1,29 @@
+{
+  "Action_Title_66fdf249588d4efe9a69a4ea990b8baa": {
+    "en-US": "Action",
+    "ru-RU": "Типы сущностей"
+  },
+  "Action_Title_711254e13e2b4f5b9051b818f066e2f2": {
+    "en-US": "Action",
+    "ru-RU": "Маппинг полей"
+  },
+  "CoverHeaderSettings_Title_1c942d313de64ae5b9d69a4eaca840fd": {
+    "en-US": "MappingFields"
+  },
+  "Description": {},
+  "Group_Title_62a8189da3574f88aa543e95207d6209": {
+    "en-US": "Group",
+    "ru-RU": "Справочники"
+  },
+  "Group_Title_b01336ca1bae48ca87306af1112859cb": {
+    "en-US": "Group",
+    "ru-RU": "Отчеты"
+  },
+  "Name": {
+    "en-US": "MappingFields",
+    "ru-RU": "Маппинг полей"
+  },
+  "Tab_Title_d1d45fc0bae843f9a77075fb9b70163d": {
+    "en-US": "Tab"
+  }
+}
