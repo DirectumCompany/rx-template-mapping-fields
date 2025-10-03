@@ -1,0 +1,62 @@
+{
+  "$type": "Sungero.Metadata.SolutionMetadata, Sungero.Metadata",
+  "NameGuid": "28a2abed-2314-4feb-9e03-fd5d1e4f673a",
+  "Name": "Mapping",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "DirRX.Mapping.Client",
+  "ClientBaseAssemblyName": "DirRX.Mapping.ClientBase",
+  "ClientBaseNamespace": "DirRX.Mapping.ClientBase",
+  "ClientNamespace": "DirRX.Mapping.Client",
+  "Code": "Mapping",
+  "CompanyCode": "DirRX",
+  "Cover": {
+    "NameGuid": "d746bf34-2ad0-43eb-a160-3436804bb3dd",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "7dc7fca7-e3b5-45ec-9cdd-d2174f81831e",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "fbdac0f1-bcf1-49ec-87d4-db8883dafa52",
+      "BackgroundPosition": "Stretch"
+    },
+    "RemoteControls": [],
+    "Tabs": []
+  },
+  "DesktopViews": [],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "DirRX.Mapping",
+  "IsolatedAssemblyName": "DirRX.Mapping.Isolated",
+  "IsolatedNamespace": "DirRX.Mapping.Isolated",
+  "IsVisible": false,
+  "OrderedSpecialFolders": [],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.Mapping",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "DirRX.Mapping.Server",
+  "ServerNamespace": "DirRX.Mapping.Server",
+  "SharedAssemblyName": "DirRX.Mapping.Shared",
+  "SharedNamespace": "DirRX.Mapping.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "SolutionMetadata",
+      "Number": 9
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 9
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}
