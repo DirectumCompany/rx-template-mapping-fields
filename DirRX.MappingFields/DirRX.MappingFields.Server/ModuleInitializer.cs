@@ -19,7 +19,7 @@ namespace DirRX.MappingFields.Server
     public static void CreateEntitiesType()
     {
       var entitiesMetadata = PublicFunctions.Module.GetEntitiesMetadata();
-      PublicFunctions.Module.CreateEntitiesType(entitiesMetadata);
+      Functions.Module.CreateEntitiesType(entitiesMetadata);
     }
     
     /// <summary>

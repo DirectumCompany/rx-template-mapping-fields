@@ -22,7 +22,7 @@ namespace DirRX.MappingFields
       var guidsSelected = EntityMappingReport.EntitiesType.Select(c => Guid.Parse(c.Guid));
       
       var entities = PublicFunctions.Module.GetEntitiesMetadata().Where(c => guidsSelected.Contains(c.NameGuid));
-      var tableData = new List<MappingFields.Structures.Module.ITableData>();
+      var tableData = new List<MappingFields.Structures.Module.TableData>();
       
       foreach (var entity in entities)
       {
@@ -42,7 +42,7 @@ namespace DirRX.MappingFields
           data.MaxStringLength = propertyInfo.MaxStringLength == null ? string.Empty : propertyInfo.MaxStringLength.ToString();
           data.TypeJson = PublicFunctions.Module.CastTypeEntityToLocalizeName(propertyInfo.Type, propertyInfo.PropertyGuid, true);
           
-          // тут дозаполнение типа данных для перечисления
+          // Дозаполнение типа данных для перечисления
           if (propertyInfo.EnumCollection.Any())
           {
             data.Type = string.Format("{0}:\n {1}", data.Type, string.Join(Environment.NewLine,  propertyInfo.EnumCollection.Select(c => string.Format("  • «{0}»", c.LocalizedName)).ToList()));

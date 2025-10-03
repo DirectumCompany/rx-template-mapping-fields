@@ -113,18 +113,6 @@
       "ReturnTypeFullName": "System.String"
     },
     {
-      "Name": "CreateEntitiesType",
-      "Parameters": [
-        {
-          "Name": "entityMetadata",
-          "ParameterType": "global::System.Collections.Generic.List<Sungero.Metadata.EntityMetadata>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
-        }
-      ],
-      "ReturnType": "void",
-      "ReturnTypeFullName": "System.Void"
-    },
-    {
       "Name": "GetEntitiesMetadata",
       "ReturnType": "global::System.Collections.Generic.List<Sungero.Metadata.EntityMetadata>",
       "ReturnTypeFullName": "System.Collections.Generic.List"
@@ -153,29 +141,6 @@
     }
   ],
   "PublicStructures": [
-    {
-      "Name": "CollectionInfo",
-      "IsPublic": true,
-      "Properties": [
-        {
-          "Name": "Name",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
-        },
-        {
-          "Name": "LocalizedName",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
-        },
-        {
-          "Name": "Properties",
-          "IsList": true,
-          "IsNullable": true,
-          "TypeFullName": "global::System.Collections.Generic.List<global::DirRX.MappingFields.Structures.Module.IPropertyInfo>"
-        }
-      ],
-      "StructureNamespace": "DirRX.MappingFields.Structures.Module"
-    },
     {
       "Name": "EnumerationInfo",
       "IsPublic": true,
@@ -231,62 +196,6 @@
           "Name": "MaxStringLength",
           "IsNullable": true,
           "TypeFullName": "global::System.Nullable<global::System.Int32>"
-        }
-      ],
-      "StructureNamespace": "DirRX.MappingFields.Structures.Module"
-    },
-    {
-      "Name": "TableData",
-      "IsPublic": true,
-      "Properties": [
-        {
-          "Name": "ReportSessionId",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
-        },
-        {
-          "Name": "ItemId",
-          "TypeFullName": "global::System.Int32"
-        },
-        {
-          "Name": "NameEntity",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
-        },
-        {
-          "Name": "NameProperty",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
-        },
-        {
-          "Name": "LocalizedName",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
-        },
-        {
-          "Name": "TypeJson",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
-        },
-        {
-          "Name": "Type",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
-        },
-        {
-          "Name": "PropertyGuid",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
-        },
-        {
-          "Name": "EnumCollection",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
-        },
-        {
-          "Name": "MaxStringLength",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
         }
       ],
       "StructureNamespace": "DirRX.MappingFields.Structures.Module"

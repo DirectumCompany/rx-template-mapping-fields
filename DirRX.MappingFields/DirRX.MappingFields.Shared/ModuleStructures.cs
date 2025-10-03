@@ -9,7 +9,6 @@ namespace DirRX.MappingFields.Structures.Module
   /// <summary>
   /// Модель таблицы.
   /// </summary>
-  [Public]
   partial class TableData
   {
     /// <summary>
@@ -33,7 +32,7 @@ namespace DirRX.MappingFields.Structures.Module
     public string NameProperty { get; set; }
     
     /// <summary>
-    /// Локализированное наименование свойства.
+    /// Локализованное наименование свойства.
     /// </summary>
     public string LocalizedName { get; set; }
     
@@ -53,7 +52,7 @@ namespace DirRX.MappingFields.Structures.Module
     public string PropertyGuid { get; set; }
     
     /// <summary>
-    /// Значения свойства перечислении.
+    /// Значения свойства перечисления.
     /// </summary>
     public string EnumCollection { get; set; }
     
@@ -66,7 +65,6 @@ namespace DirRX.MappingFields.Structures.Module
   /// <summary>
   /// Информация о коллекциях.
   /// </summary>
-  [Public]
   partial class CollectionInfo
   {
     /// <summary>
@@ -75,7 +73,7 @@ namespace DirRX.MappingFields.Structures.Module
     public string Name { get; set; }
     
     /// <summary>
-    /// Локализированное наименование.
+    /// Локализованное наименование.
     /// </summary>
     public string LocalizedName { get; set; }
     
@@ -97,7 +95,7 @@ namespace DirRX.MappingFields.Structures.Module
     public string Name { get; set; }
     
     /// <summary>
-    /// Локализированное наименование свойства.
+    /// Локализованное наименование свойства.
     /// </summary>
     public string LocalizedName { get; set; }
     
@@ -139,7 +137,7 @@ namespace DirRX.MappingFields.Structures.Module
     public string Name { get; set; }
     
     /// <summary>
-    /// Локализированное наименование.
+    /// Локализованное наименование.
     /// </summary>
     public string LocalizedName { get; set; }
   }

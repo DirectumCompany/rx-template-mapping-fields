@@ -15,7 +15,7 @@ namespace DirRX.MappingFields.Server
     /// </summary>
     /// <param name="type">Тип данных.</param>
     /// <param name="guid">Guid типа сущности.</param>
-    /// <param name="isJson">Локазлизация для json.</param>
+    /// <param name="isJson">Локализация для json.</param>
     /// <returns>Локализованный тип данных.</returns>
     [Public]
     public string CastTypeEntityToLocalizeName(string type, string guid, bool isJson)
@@ -63,7 +63,6 @@ namespace DirRX.MappingFields.Server
 
         if (entity != null)
         {
-
           if (entity.BaseGuid == Guid.Parse(PublicConstants.Module.DatabookGUID))
             typeStr = PublicConstants.Module.DatabookGUID;
           else if (entity.BaseGuid == Guid.Parse(PublicConstants.Module.DocumentGUID))
@@ -71,7 +70,7 @@ namespace DirRX.MappingFields.Server
           else if (entity.BaseGuid == Guid.Parse(PublicConstants.Module.TaskGUID))
             typeStr = PublicConstants.Module.TaskGUID;
           // В перекрытиях у справочников родительский гуид почему то считается от Entity, а не от DatabookEntry.
-          else if (entity.BaseGuid == Guid.Parse(PublicConstants.Module.EntityGUID)) 
+          else if (entity.BaseGuid == Guid.Parse(PublicConstants.Module.EntityGUID))
             typeStr = PublicConstants.Module.DatabookGUID;
           
           if (!string.IsNullOrEmpty(typeStr))
@@ -93,7 +92,7 @@ namespace DirRX.MappingFields.Server
     /// Поиск базового типа сущности.
     /// </summary>
     /// <param name="guid">Guid сущности.</param>
-    /// <param name="isJson">Локазлизация для json.</param>
+    /// <param name="isJson">Локализация для json.</param>
     /// <returns>Guid базового типа сущности.</returns>
     public string FindBaseEntityName(string guid, bool isJson)
     {
@@ -160,9 +159,9 @@ namespace DirRX.MappingFields.Server
     }
     
     /// <summary>
-    /// Создание записи в справочнике Типы сущностей.
+    /// Создание записей в справочнике Типы сущностей
     /// </summary>
-    [Public]
+    /// <param name="entityMetadata">Список метаданных сущностей.</param>
     public void CreateEntitiesType(List<Sungero.Metadata.EntityMetadata> entityMetadata)
     {
       foreach (var metadata in entityMetadata)
@@ -191,7 +190,7 @@ namespace DirRX.MappingFields.Server
     /// <summary>
     /// Получить метаданные всех наследников от Справочника и Документа.
     /// </summary>
-    /// <returns>список метаданных наследников.</returns>
+    /// <returns>Список метаданных наследников.</returns>
     [Public]
     public List<Sungero.Metadata.EntityMetadata> GetEntitiesMetadata()
     {
@@ -207,7 +206,7 @@ namespace DirRX.MappingFields.Server
       {
         var baseEntityMetadata = Sungero.Metadata.Services.MetadataSearcher.FindEntityMetadata(Guid.Parse(baseEntity));
         
-        var chaildEntities = Sungero.Metadata.EntityMetadata.GetDescendants(baseEntityMetadata)
+        var childEntities = Sungero.Metadata.EntityMetadata.GetDescendants(baseEntityMetadata)
           .Cast<Sungero.Metadata.EntityMetadata>()
           .Where(c => c.CanCreateInstance == true && c.IsLayerMetadata == false)
           .ToList();
@@ -216,16 +215,14 @@ namespace DirRX.MappingFields.Server
           .Where(c => c.IsAbstract == true && c.InterfaceType.Namespace != "Sungero.CoreEntities" && c.IsLayerMetadata == false)
           .ToList();
         
-        var allEntities = new List<Sungero.Metadata.EntityMetadata>();
-        allEntities.AddRange(chaildEntities);
-        allEntities.AddRange(abstractEntities);
-        
-        foreach (var entity in allEntities)
-          entitiesMetadata.Add(entity);
+        entitiesMetadata.AddRange(childEntities);
+        entitiesMetadata.AddRange(abstractEntities);
       }
       
       return entitiesMetadata;
     }
+    
+    #region Методы приведения к типу.
     
     /// <summary>
     /// Приведение объекта к типу StringPropertyMetadata.
@@ -300,6 +297,32 @@ namespace DirRX.MappingFields.Server
     }
     
     /// <summary>
+    /// Приведение объекта к типу NavigationPropertyMetadata.
+    /// </summary>
+    /// <param name="castEntity">Объект для приведения.</param>
+    /// <returns>Объект с типом NavigationPropertyMetadata, либо null при ошибке во время приведения к типу.</returns>
+    public static Sungero.Metadata.NavigationPropertyMetadata CastToNavigationPropertyMetadata(object castEntity)
+    {
+      NavigationPropertyMetadata val = null;
+      
+      if (castEntity == null)
+        return val;
+      
+      try
+      {
+        val = (NavigationPropertyMetadata)castEntity;
+      }
+      catch (Exception ex)
+      {
+        Logger.Error("Error", ex);
+      }
+      
+      return val;
+    }
+    
+    #endregion
+    
+    /// <summary>
     /// Создать сущность по Guid типа.
     /// </summary>
     /// <param name="typeGuid">Guid типа сущности.</param>
@@ -326,30 +349,6 @@ namespace DirRX.MappingFields.Server
         "PasswordLastChangeDate",
         "LockoutEndDate"
       };
-    }
-    
-    /// <summary>
-    /// Приведение объекта к типу NavigationPropertyMetadata.
-    /// </summary>
-    /// <param name="castEntity">Объект для приведения.</param>
-    /// <returns>Объект с типом NavigationPropertyMetadata, либо null при ошибке во время приведения к типу.</returns>
-    public static Sungero.Metadata.NavigationPropertyMetadata CastToNavigationPropertyMetadata(object castEntity)
-    {
-      NavigationPropertyMetadata val = null;
-      
-      if (castEntity == null)
-        return val;
-      
-      try
-      {
-        val = (NavigationPropertyMetadata)castEntity;
-      }
-      catch (Exception ex)
-      {
-        Logger.Error("Error", ex);
-      }
-      
-      return val;
     }
     
     /// <summary>
@@ -463,13 +462,12 @@ namespace DirRX.MappingFields.Server
     }
     
     /// <summary>
-    /// Получить список реквизитов, которые не доступны для выбора.
+    /// Получить список свойст, которые не доступны для выбора.
     /// </summary>
-    /// <returns>Список реквизитов.</returns>
+    /// <returns>Список свойст.</returns>
     public virtual List<string> GetExcludeProperties()
     {
       return new List<string> {
-        //        "Id",
         "SID",
         "Sid",
         "TypeDiscriminator",
@@ -482,32 +480,20 @@ namespace DirRX.MappingFields.Server
         "IsTransient",
         "RootEntity",
         "PersonalPhotoHash",
-        //        "IsSystem",
         "PersonalPhotoHash",
         "IsCardReadOnly",
-        //        "HasRelations",
-        //        "AssociatedApplication",
-        //        "LastVersionApproved",
-        //        "HasVersions",
-        //        "LastVersionSignatureType",
-        //        "HasPublicBody",
-        //        "Storage",
-        //        "Versions",
         "Parameters"
       };
     }
     
     /// <summary>
-    /// Получить список типов реквизитов, которые не доступны для выбора.
+    /// Получить список типов, которые не доступны для выбора.
     /// </summary>
     /// <returns>Список типов.</returns>
     public virtual List<object> GetExcludePropertyTypes()
     {
       return new List<object> {
-        //        Sungero.Metadata.PropertyType.Collection,
-        //        Sungero.Metadata.PropertyType.BinaryData,
         Sungero.Metadata.PropertyType.Component,
-        //Sungero.Metadata.PropertyType.Image
       };
     }
   }

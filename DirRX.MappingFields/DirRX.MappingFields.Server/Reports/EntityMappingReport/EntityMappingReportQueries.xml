@@ -1,6 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <queries>
   <query key="CreateEntityMappingTable">
+    <mssql><![CDATA[CREATE TABLE {0} (
+  ReportSessionId NVARCHAR(255) NOT NULL,
+  ItemId INT NOT NULL,
+  NameEntity NVARCHAR(255) NOT NULL,
+  NameProperty NVARCHAR(255) NOT NULL,
+  LocalizedName NVARCHAR(255) NULL,
+  Type NVARCHAR(255) NOT NULL,
+  TypeJson NVARCHAR(255) NOT NULL,
+  PropertyGuid NVARCHAR(255) NOT NULL,
+  EnumCollection NVARCHAR(255) NULL,
+  MaxStringLength NVARCHAR(255) NULL
+);]]></mssql>
     <postgres><![CDATA[create table {0}
  (ReportSessionId citext NOT NULL,
   ItemId int not NULL,
@@ -14,7 +26,29 @@
   MaxStringLength citext NULL)]]></postgres>
   </query>
   <query key="SelectEntityMappingTable">
-    <postgres><![CDATA[SELECT reportsessionid, nameentity, itemid, nameproperty, localizedname, type, typeJson, propertyguid, enumcollection, maxstringlength
-	FROM sungero_reports_entitymapping;]]></postgres>
+    <mssql><![CDATA[SELECT 
+  ReportSessionId, 
+  NameEntity, 
+  ItemId, 
+  NameProperty, 
+  LocalizedName, 
+  Type, 
+  TypeJson, 
+  PropertyGuid, 
+  EnumCollection, 
+  MaxStringLength
+FROM sungero_reports_entitymapping;]]></mssql>
+    <postgres><![CDATA[SELECT
+  reportsessionid,
+  nameentity,
+  itemid,
+  nameproperty,
+  localizedname,
+  type,
+  typeJson,
+  propertyguid,
+  enumcollection,
+  maxstringlength
+FROM sungero_reports_entitymapping;]]></postgres>
   </query>
 </queries>
