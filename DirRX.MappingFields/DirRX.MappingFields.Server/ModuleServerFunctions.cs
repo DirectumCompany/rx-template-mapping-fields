@@ -104,7 +104,7 @@ namespace DirRX.MappingFields.Server
       while (needFind)
       {
         var entity = Sungero.Metadata.Services.MetadataSearcher.FindEntityMetadata(Guid.Parse(guidSearch));
-        Logger.DebugFormat("{0} {1}", nameEntity, entity.BaseGuid);
+
         if (entity != null)
         {
           if (entity.BaseGuid == Guid.Parse(PublicConstants.Module.DatabookGUID))

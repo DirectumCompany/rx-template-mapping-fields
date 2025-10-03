@@ -38,12 +38,8 @@
       "ItemId": "8f4ae130-8b92-4590-9a6d-01b8179ee7ca"
     },
     {
-      "ItemId": "ef3ee92c-a304-4dc3-9c7b-d18551cfe318",
-      "PreviousItemId": "8f4ae130-8b92-4590-9a6d-01b8179ee7ca"
-    },
-    {
       "ItemId": "857f3d03-62bf-4ef9-9ed7-fc714676f7c1",
-      "PreviousItemId": "ef3ee92c-a304-4dc3-9c7b-d18551cfe318"
+      "PreviousItemId": "8f4ae130-8b92-4590-9a6d-01b8179ee7ca"
     }
   ],
   "HandledEvents": [
