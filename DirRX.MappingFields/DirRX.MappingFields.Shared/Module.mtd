@@ -38,8 +38,12 @@
       "ItemId": "8f4ae130-8b92-4590-9a6d-01b8179ee7ca"
     },
     {
-      "ItemId": "857f3d03-62bf-4ef9-9ed7-fc714676f7c1",
+      "ItemId": "ef3ee92c-a304-4dc3-9c7b-d18551cfe318",
       "PreviousItemId": "8f4ae130-8b92-4590-9a6d-01b8179ee7ca"
+    },
+    {
+      "ItemId": "857f3d03-62bf-4ef9-9ed7-fc714676f7c1",
+      "PreviousItemId": "ef3ee92c-a304-4dc3-9c7b-d18551cfe318"
     }
   ],
   "HandledEvents": [
@@ -56,6 +60,14 @@
     "IsVisible"
   ],
   "PublicConstants": [
+    {
+      "Name": "AssignmentGUID",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"91cbfdc8-5d5d-465e-95a4-3235b8c01d5b\""
+    },
     {
       "Name": "DatabookGUID",
       "ParentClasses": [
@@ -79,6 +91,14 @@
       ],
       "TypeName": "System.String",
       "Value": "\"79aaa247-5f24-47a3-bf05-f0cd7ad30161\""
+    },
+    {
+      "Name": "NoticeGUID",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"ef79164b-2ce7-451b-9ba6-eb59dd9a4a74\""
     },
     {
       "Name": "TaskGUID",

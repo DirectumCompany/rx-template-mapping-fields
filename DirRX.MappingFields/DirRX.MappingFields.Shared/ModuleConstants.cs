@@ -135,6 +135,18 @@ namespace DirRX.MappingFields.Constants
     /// </summary>
     [Public]
     public const string EntityGUID = "79aaa247-5f24-47a3-bf05-f0cd7ad30161";
-
+    
+    /// <summary>
+    /// Guid уведомления.
+    /// </summary>
+    [Public]
+    public const string NoticeGUID = "ef79164b-2ce7-451b-9ba6-eb59dd9a4a74";
+    
+    /// <summary>
+    /// Guid задания.
+    /// </summary>
+    [Public]
+    public const string AssignmentGUID = "91cbfdc8-5d5d-465e-95a4-3235b8c01d5b";
+    
   }
 }

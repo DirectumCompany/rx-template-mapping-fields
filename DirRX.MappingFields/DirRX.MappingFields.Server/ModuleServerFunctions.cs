@@ -104,7 +104,7 @@ namespace DirRX.MappingFields.Server
       while (needFind)
       {
         var entity = Sungero.Metadata.Services.MetadataSearcher.FindEntityMetadata(Guid.Parse(guidSearch));
-        
+        Logger.DebugFormat("{0} {1}", nameEntity, entity.BaseGuid);
         if (entity != null)
         {
           if (entity.BaseGuid == Guid.Parse(PublicConstants.Module.DatabookGUID))
@@ -113,6 +113,10 @@ namespace DirRX.MappingFields.Server
             typeStr = isJson ? string.Format("Идентифкатор (целое число) документа <b>{0}</b>", nameEntity) : string.Format("Документ <b>{0}</b>", nameEntity);
           if (entity.BaseGuid == Guid.Parse(PublicConstants.Module.TaskGUID))
             typeStr = isJson ? string.Format("Идентификатор (целое число) задачи <b>{0}</b>", nameEntity) : string.Format("Задача <b>{0}</b>", nameEntity);
+          if (entity.BaseGuid == Guid.Parse(PublicConstants.Module.AssignmentGUID))
+            typeStr = isJson ? string.Format("Идентификатор (целое число) задания <b>{0}</b>", nameEntity) : string.Format("Задание <b>{0}</b>", nameEntity);
+          if (entity.BaseGuid == Guid.Parse(PublicConstants.Module.NoticeGUID))
+            typeStr = isJson ? string.Format("Идентификатор (целое число) уведомления <b>{0}</b>", nameEntity) : string.Format("Уведомление <b>{0}</b>", nameEntity);
           
           if (!string.IsNullOrEmpty(typeStr))
             needFind = false;
